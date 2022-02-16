@@ -12,7 +12,7 @@ namespace ECS.Test
         {
             // Arrange
             ITempSensor tempSensor = new TempSensor(new TestRandomGenerator(50));
-            _ecs = new Legacy.ECS(50, tempSensor, new Heater(new ECS.Test.TestLogger()));
+            _ecs = new Legacy.ECS(50, tempSensor, new Heater(new TestLogger()));
         }
 
         [Test]
