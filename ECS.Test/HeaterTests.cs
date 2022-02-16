@@ -12,7 +12,7 @@ namespace ECS.Test
         public void Setup()
         {
             // Arrange
-            _logger = new ECS.Test.TestLogger();
+            _logger = new TestLogger();
             _heater = new Heater(_logger);
         }
 
