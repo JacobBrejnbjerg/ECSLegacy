@@ -1,14 +1,17 @@
-﻿using System;
-
-namespace ECS.Legacy
+﻿namespace ECS.Legacy
 {
-    internal class TempSensor
+    internal class TempSensor : ITempSensor
     {
-        private Random gen = new Random();
+        private readonly IRandomGenerator _randomGenerator;
+
+        public TempSensor(IRandomGenerator random)
+        {
+            _randomGenerator = random;
+        }
 
         public int GetTemp()
         {
-            return gen.Next(-5, 45);
+            return _randomGenerator.GetRandomNumber(-5, 45);
         }
 
         public bool RunSelfTest()
