@@ -15,7 +15,7 @@ namespace ECS.Legacy
             _heater = heater;
         }
 
-        public void Regulate()
+        public bool Regulate()
         {
             var t = _tempSensor.GetTemp();
             Console.WriteLine($"Temperatur measured was {t}");
@@ -24,6 +24,7 @@ namespace ECS.Legacy
             else
                 _heater.TurnOff();
 
+            return true;
         }
 
         public void SetThreshold(int thr)
@@ -39,11 +40,6 @@ namespace ECS.Legacy
         public int GetCurTemp()
         {
             return _tempSensor.GetTemp();
-        }
-
-        public bool RunSelfTest()
-        {
-            return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
         }
     }
 }
