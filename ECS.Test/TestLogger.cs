@@ -1,5 +1,6 @@
 ﻿using ECS.Legacy;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace ECS.Test
 {

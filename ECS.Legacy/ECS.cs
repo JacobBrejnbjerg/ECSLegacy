@@ -17,8 +17,8 @@ namespace ECS.Legacy
 
         public bool Regulate()
         {
-            var t = _tempSensor.GetTemp();
-            Console.WriteLine($"Temperatur measured was {t}");
+            var t = GetCurTemp();
+            Console.WriteLine($"Temperature measured was {t}");
             if (t < _threshold)
                 _heater.TurnOn();
             else
