@@ -15,7 +15,8 @@ namespace ECS.Legacy
             _tempSensor = tempSensor;
             _heater = heater;
             _window = window;
-        }
+        } 
+        // test
 
         public bool Regulate()
         {
