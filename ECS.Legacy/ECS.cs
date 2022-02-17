@@ -26,13 +26,13 @@ namespace ECS.Legacy
             else
                 _heater.TurnOff();
 
-            if (t < _threshold + 15)
+            if (t < _threshold + 7)
             {
-                _window.OpenWindow();
+                _window.CloseWindow();
             }
             else
             {
-                _window.CloseWindow();
+                _window.OpenWindow();
             }
 
             return true;
